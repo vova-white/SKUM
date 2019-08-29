@@ -13,6 +13,10 @@
   text-align: center;
   margin-bottom: 4rem;
 
+  &--mb_4 {
+    margin-bottom: 1.5rem;
+  }
+
   &__heading {
     @include media-breakpoint-up('md') {
       display: flex;
@@ -69,9 +73,37 @@
     @include media-breakpoint-up('xl') {
       font-size: px-to-rem(22, $fs-desktop);
     }
+
+    &.h6 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+
+  &__subtitle {
+    display: inline-block;
+    max-width: px-to-rem(340, $fs-desktop);
   }
 
   &__content p:last-child {
     margin-bottom: 0;
+  }
+
+  &__picture {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 150px;
+
+    @include media-breakpoint-up('sm') {
+      height: 165px;
+    }
+    @include media-breakpoint-up('md') {
+      height: 315px;
+    }
+    @include media-breakpoint-up('lg') {
+      height: 335px;
+    }
   }
 }

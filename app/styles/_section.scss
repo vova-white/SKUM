@@ -22,6 +22,10 @@
         margin-bottom: px-to-em(50, $h3-font-size-desktop-clear);
       }
     }
+
+    &.h5 {
+      margin-bottom: 1em;
+    }
   }
 
   &__description {

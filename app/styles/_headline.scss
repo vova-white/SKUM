@@ -1,0 +1,37 @@
+.headline {
+  background: url('../images/headline__bg@0,5x.jpg') no-repeat center;
+  background-size: cover;
+  height: 124px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: px-to-rem(522, $fs-desktop);
+    background-image: linear-gradient(0deg, $gray-100 0%, #143570 74%);
+    opacity: 0.6;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 3;
+    color: $white;
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up('md') {
+    background-image: url('../images/headline__bg.jpg');
+    height: px-to-rem(400, $fs-desktop);
+  }
+
+  @include media-breakpoint-up('xl') {
+    background-image: url('../images/headline__bg@2x.jpg');
+  }
+}

@@ -8,9 +8,14 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Gabinete | About</title>
+    <title>SKUM - About</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <!-- Place favicon.ico in the root directory -->
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500&display=swap&subset=chinese-traditional"
+      rel="stylesheet"
+    />
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css" />
     <!-- endbuild -->
@@ -26,50 +31,66 @@
 
     <!-- Header -->
     <header class="header sticky-top">
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <div class="container">
-          <a class="navbar-brand" href="#">Gabinete</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#"
-                  >Home <span class="sr-only">(current)</span></a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item pl-2">
-                <a class="btn btn-outline-primary" href="#">Button</a>
-              </li>
-            </ul>
-          </div>
+      <nav class="navbar navbar-expand-lg header__navbar bg-white">
+        <a class="navbar-brand" href="/">
+          <picture class="logo">
+            <source
+              media="(max-width: 991px)"
+              srcset="images/logo.png 2x, images/logo@0,5x.png 1x"
+              sizes="183px"
+            />
+            <source
+              media="(min-width: 992px)"
+              srcset="images/logo@2x.png 2x, images/logo.png 1x"
+              sizes="383px"
+            />
+            <img src="images/logo.png" class="img-fluid" alt="SKUM Logo" />
+          </picture>
+        </a>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar"
+          aria-controls="navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler__line"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/"
+                >關於我們<span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">單位簡介</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">最新消息</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">下載刊物</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">參與捐款</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">招聘區</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">聯絡我們</a>
+            </li>
+            <li class="nav-item pl-lg-2">
+              <a class="nav-link nav-link--style_button" href="#"
+                ><svg class="icon icon-star">
+                  <use xlink:href="images/sprite/sprite.svg#star"></use></svg
+                >報名</a
+              >
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -77,80 +98,84 @@
 
     <!-- Headline -->
     <div class="headline">
-      <h1 class="headline__title">Headline title</h1>
+      <h1 class="h3 headline__title">關於我們</h1>
     </div>
     <!-- Headline End -->
 
     <!-- Buttons -->
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-6 w-md-20">
-          <a href="#0" class="btn btn-primary btn-lg w-100">Button Text</a>
+    <div class="container-fluid buttons-menu-container">
+      <div class="row buttons-menu">
+        <div class="col-auto buttons-menu__item">
+          <a href="#0" class="btn btn-outline-primary active">服務處簡介</a>
         </div>
-        <div class="col-6 w-md-20">
-          <a href="#0" class="btn btn-outline-primary btn-lg w-100"
-            >Button Text</a
-          >
+        <div class="col-auto buttons-menu__item">
+          <a href="#0" class="btn btn-outline-primary">20周年回顧</a>
         </div>
-        <div class="col-6 w-md-20">
-          <a href="#0" class="btn btn-outline-primary btn-lg w-100"
-            >Button Text</a
-          >
+        <div class="col-auto buttons-menu__item">
+          <a href="#0" class="btn btn-outline-primary">2017社會服務獎章</a>
         </div>
-        <div class="col-6 w-md-20">
-          <a href="#0" class="btn btn-outline-primary btn-lg w-100"
-            >Button Text</a
-          >
+        <div class="col-auto buttons-menu__item">
+          <a href="#0" class="btn btn-outline-primary">組織架構</a>
         </div>
-        <div class="col-6 w-md-20">
-          <a href="#0" class="btn btn-outline-primary btn-lg w-100"
-            >Button Text</a
-          >
+        <div class="col-auto buttons-menu__item">
+          <a href="#0" class="btn btn-outline-primary">2018-2022年 服務規劃</a>
         </div>
       </div>
     </div>
     <!-- Buttons End -->
 
     <!-- Content -->
-    <section class="section section--padding_xs">
+    <section class="section pt-0">
       <div class="container text-center">
-        <h2 class="h3 section__title">Section title</h2>
-        <div class="section__description">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
-            soluta expedita officia, vel porro nobis asperiores culpa, maxime
-            pariatur cumque numquam libero illum doloribus. Voluptatibus harum
-            officia totam impedit culpa.
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
-            soluta expedita officia, vel porro nobis asperiores culpa, maxime
-            pariatur cumque numquam libero illum doloribus. Voluptatibus harum
-            officia totam impedit culpa.
-          </p>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10">
+            <h2 class="h5 section__title">澳門服務簡介</h2>
+            <div class="section__description">
+              <p>
+                聖公會澳門社會服務處早於1997年成立，一直持守「個別關懷•專業服務•同行成長•創意更新」
+                之宗旨，並本著「非以役人，乃役於人」的基督
+                精神，為弱勢社群提供多元化的支援。
+              </p>
+              <p>
+                現時服務處已有14個服務單位、2個服務計劃，
+                為澳門居民提供適切服務， 協助他們開拓豐盛人生。
+              </p>
+            </div>
+            <h3 class="h5 section__title">Background</h3>
+            <p class="p--sm">
+              Established in 1997, the S.K.H. Macau Social Services Coordination
+              Office has always devoted itself to providing personalized care
+              and professional services while walking hand in hand with its
+              service users in growth, innovation and reflection. It provides
+              many forms of assistance to those in need, in line with the
+              Christian spirit, “to serve but not to be served”. The office now
+              has 14 service units and 2 service project through which it
+              extends its professional services to the citizens of Macau to help
+              them build promising lives
+            </p>
+          </div>
         </div>
-        <h3>Background</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem
-          placeat vero facilis nobis reiciendis, est deserunt, perferendis
-          beatae eos eum iusto adipisci accusamus. Illum id quaerat, amet
-          temporibus quae mollitia.
-        </p>
       </div>
     </section>
     <!-- Content End -->
 
     <!-- Map -->
-    <section class="section">
+    <section class="section pt-0">
       <div class="container text-center">
-        <h2 class="h3 section__title">Section title</h2>
+        <h2 class="h5 section__title">服務處地圖 Map</h2>
         <div class="row justify-content-center">
           <div class="col-12 col-sm-8">
-            <img
-              src="https://fakeimg.pl/800x1000/"
-              alt="Map"
-              class="img-fluid"
-            />
+            <picture>
+              <source
+                media="(max-width: 691px)"
+                srcset="images/map.jpg 2x, images/map@0,5x.jpg 1x"
+              />
+              <source
+                media="(min-width: 690px)"
+                srcset="images/map@2x.jpg 2x, images/map.jpg 1x"
+              />
+              <img src="images/map.jpg" class="img-fluid" alt="map" />
+            </picture>
           </div>
         </div>
       </div>
@@ -158,56 +183,126 @@
     <!-- Map End -->
 
     <!-- Services -->
-    <section class="section">
+    <section class="section pt-0">
       <div class="container">
-        <h2 class="h3 section__title">Section title</h2>
-        <div class="row">
-          <div class="col-12 col-sm-6">
-            <div class="service">
-              <div class="service__heading">
-                <img
-                  src="https://fakeimg.pl/200x200/"
-                  alt="service"
-                  class="service__thumb"
+        <h2 class="h5 section__title mb-0">服務範疇 Services</h2>
+        <div class="row pt-5">
+          <div class="col-6 services__col">
+            <div class="service service--mb_4">
+              <picture class="service__picture">
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    images/service__children.png      2x,
+                    images/service__children@0,5x.png 1x
+                  "
                 />
-              </div>
-              <h4 class="service__title">Lorem ipsum dolor sit</h4>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    images/service__children@2x.png 2x,
+                    images/service__children.png    1x
+                  "
+                />
+                <img
+                  src="images/service__children.png"
+                  class="img-fluid"
+                  alt="service__children"
+                />
+              </picture>
+              <h6 class="service__title h6">
+                兒童服務
+              </h6>
+              <span class="service__subtitle">Children Services</span>
             </div>
           </div>
-          <div class="col-12 col-sm-6">
-            <div class="service">
-              <div class="service__heading">
-                <img
-                  src="https://fakeimg.pl/200x200/"
-                  alt="service"
-                  class="service__thumb"
+          <div class="col-6 services__col">
+            <div class="service service--mb_4">
+              <picture class="service__picture">
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    images/service__teen.png      2x,
+                    images/service__teen@0,5x.png 1x
+                  "
                 />
-              </div>
-              <h4 class="service__title">Lorem ipsum dolor sit</h4>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    images/service__teen@2x.png 2x,
+                    images/service__teen.png    1x
+                  "
+                />
+                <img
+                  src="images/service__teen.png"
+                  class="img-fluid"
+                  alt="service__teen"
+                />
+              </picture>
+              <h6 class="service__title h6">
+                青少年服務
+              </h6>
+              <span class="service__subtitle">Teenqge Services</span>
             </div>
           </div>
-          <div class="col-12 col-sm-6">
-            <div class="service">
-              <div class="service__heading">
-                <img
-                  src="https://fakeimg.pl/200x200/"
-                  alt="service"
-                  class="service__thumb"
+          <div class="col-6 services__col">
+            <div class="service service--mb_4">
+              <picture class="service__picture">
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    images/service__family.png      2x,
+                    images/service__family@0,5x.png 1x
+                  "
                 />
-              </div>
-              <h4 class="service__title">Lorem ipsum dolor sit</h4>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    images/service__family@2x.png 2x,
+                    images/service__family.png    1x
+                  "
+                />
+                <img
+                  src="images/service__family.png"
+                  class="img-fluid"
+                  alt="service__family"
+                />
+              </picture>
+              <h6 class="service__title h6">
+                家庭服務
+              </h6>
+              <span class="service__subtitle">Family Services</span>
             </div>
           </div>
-          <div class="col-12 col-sm-6">
-            <div class="service">
-              <div class="service__heading">
-                <img
-                  src="https://fakeimg.pl/200x200/"
-                  alt="service"
-                  class="service__thumb"
+          <div class="col-6 services__col">
+            <div class="service service--mb_4">
+              <picture class="service__picture">
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    images/service__problem.png      2x,
+                    images/service__problem@0,5x.png 1x
+                  "
                 />
-              </div>
-              <h4 class="service__title">Lorem ipsum dolor sit</h4>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    images/service__problem@2x.png 2x,
+                    images/service__problem.png    1x
+                  "
+                />
+                <img
+                  src="images/service__problem.png"
+                  class="img-fluid"
+                  alt="service__problem"
+                />
+              </picture>
+              <h6 class="service__title h6">
+                預防賭博失調及輔導服務
+              </h6>
+              <span class="service__subtitle">
+                Probelm Gambling Prevention and Gambling Counseling Services
+              </span>
             </div>
           </div>
         </div>
@@ -216,49 +311,60 @@
     <!-- Services End -->
 
     <!-- Footer -->
-    <footer class="footer bg-primary">
-      <div class="container">
-        <nav class="navbar navbar-expand navbar-dark px-0">
-          <a class="navbar-brand" href="#">Gabinete</a>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+    <footer class="footer bg-primary text-white py-5">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand p-0 pb-3">
+          <a class="navbar-brand p-0" href="#"
+            ><picture class="logo logo--style_white">
+              <source
+                srcset="images/logo--white@2x.png 2x, images/logo--white.png 1x"
+                sizes="191px"
+              />
+              <img
+                src="images/logo--white.png"
+                class="img-fluid"
+                alt="SKUM Logo"
+              /> </picture
+          ></a>
+          <ul class="navbar-nav ml-auto d-none d-md-flex">
+            <li class="nav-item">
               <a class="nav-link" href="#"
-                >Home <span class="sr-only">(current)</span></a
+                >關於我們 <span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">單位簡介</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">最新消息</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">下載刊物</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">參與捐款</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">招聘區</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">聯絡我們</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#">報名資訊</a>
             </li>
           </ul>
         </nav>
 
-        <div class="row contacts justify-content-end">
-          <div class="col-auto contacts__item">
-            Address : Lorem ipsum dolor
+        <div class="row contacts justify-content-md-end">
+          <div class="col-12 col-md-auto contacts__item">
+            地址 : 澳門白馬行53-55號
           </div>
-          <div class="col-auto contacts__item">
-            Tel : 28353449
+          <div class="col-12 col-md-auto contacts__item">
+            電話 : 28353449
           </div>
-          <div class="col-auto contacts__item">
-            Tel : 28353449
+          <div class="col-12 col-md-auto contacts__item">
+            傳真 : 28353449
           </div>
         </div>
       </div>

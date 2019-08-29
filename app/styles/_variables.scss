@@ -298,14 +298,14 @@ $h1-font-size: $font-size-base * 2.25 !default;
 $h2-font-size: $font-size-base * 2 !default;
 $h3-font-size: $font-size-base * 1.2 !default;
 $h4-font-size: $font-size-base * 1.5 !default;
-$h5-font-size: $font-size-base * 1.25 !default;
+$h5-font-size: $font-size-base !default;
 $h6-font-size: $font-size-base !default;
 
 $h1-font-size-clear: $fs-mobile * 2.25 !default;
 $h2-font-size-clear: $fs-mobile * 2 !default;
 $h3-font-size-clear: $fs-mobile * 1.2 !default;
 $h4-font-size-clear: $fs-mobile * 1.5 !default;
-$h5-font-size-clear: $fs-mobile * 1.25 !default;
+$h5-font-size-clear: $fs-mobile !default;
 $h6-font-size-clear: $fs-mobile !default;
 
 $h1-font-size-desktop: $font-size-base * 2.25 !default;

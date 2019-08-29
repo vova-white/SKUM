@@ -89,7 +89,7 @@ function html() {
 }
 
 function images() {
-  return src('app/images/**/*', { since: lastRun(images) })
+  return src(['app/images/**/*', '!app/images/sprite/sprite.svg'], { since: lastRun(images) })
     .pipe($.imagemin())
     .pipe(dest('dist/images'));
 }
@@ -138,6 +138,11 @@ function svgSpriteBuild() {
   );
 }
 
+function removeSprite() {
+  return src('app/images/sprite/sprite.svg')
+    .pipe(dest('dist/images/sprite/'));
+}
+
 function fonts() {
   return src('app/fonts/**/*.{eot,svg,ttf,woff,woff2}').pipe(
     $.if(!isProd, dest('.tmp/fonts'), dest('dist/fonts'))
@@ -162,8 +167,9 @@ const build = series(
   clean,
   parallel(
     lint,
-    series(parallel(svgSpriteBuild, styles, scripts), html),
+    series(svgSpriteBuild, parallel(styles, scripts), html),
     images,
+    removeSprite,
     fonts,
     extras
   ),

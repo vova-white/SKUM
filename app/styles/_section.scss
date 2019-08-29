@@ -1,0 +1,46 @@
+.section {
+  padding-top: px-to-rem(60, $fs-mobile);
+  padding-bottom: px-to-rem(60, $fs-mobile);
+
+  @include media-breakpoint-up('xl') {
+    padding-top: px-to-rem(100, $fs-mobile);
+    padding-bottom: px-to-rem(100, $fs-mobile);
+  }
+
+  &__title,
+  &__description {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: px-to-em(45, $h3-font-size-clear);
+
+    @include media-breakpoint-up('xl') {
+      margin-bottom: px-to-em(25, $h3-font-size-desktop-clear);
+
+      &--mb_double {
+        margin-bottom: px-to-em(50, $h3-font-size-desktop-clear);
+      }
+    }
+  }
+
+  &__description {
+    line-height: 2em;
+    max-width: 975px;
+    margin: 0 auto px-to-em(70, $fs-mobile);
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    @include media-breakpoint-up('xl') {
+      font-size: px-to-rem(23, $fs-desktop);
+      @include em-lh(40, 23);
+      margin-bottom: px-to-em(70, $fs-desktop);
+    }
+  }
+
+  &--light {
+    background: $gray-100;
+  }
+}

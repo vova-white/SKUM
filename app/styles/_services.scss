@@ -1,0 +1,77 @@
+.services {
+  &__col:last-child .service {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up('sm') {
+    &__col:nth-child(3) .service {
+      margin-bottom: 0;
+    }
+  }
+}
+.service {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  &__heading {
+    @include media-breakpoint-up('md') {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: px-to-rem(74, $fs-mobile);
+      margin-bottom: px-to-rem(30, $fs-desktop);
+      @include media-breakpoint-up('xl') {
+        height: px-to-rem(95, $fs-desktop);
+      }
+    }
+  }
+
+  &__icon {
+    color: $primary;
+    margin-bottom: 1rem;
+    @include media-breakpoint-up('md') {
+      width: px-to-rem(148, $fs-desktop);
+      margin-bottom: 0;
+    }
+    $icons: (
+      respect: 67,
+      conversation: 67,
+      growth: 68,
+      idea: 74
+    );
+    $iconsDesktop: (
+      respect: 82,
+      conversation: 83,
+      growth: 94,
+      idea: 95
+    );
+    @each $name, $size in $icons {
+      .icon-#{$name} {
+        font-size: px-to-rem($size, $fs-mobile);
+      }
+    }
+    @include media-breakpoint-up('xl') {
+      @each $name, $size in $iconsDesktop {
+        .icon-#{$name} {
+          font-size: px-to-rem($size, $fs-desktop);
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1rem;
+    margin-bottom: 1em;
+
+    @include media-breakpoint-up('md') {
+      margin-bottom: 0;
+    }
+    @include media-breakpoint-up('xl') {
+      font-size: px-to-rem(22, $fs-desktop);
+    }
+  }
+
+  &__content p:last-child {
+    margin-bottom: 0;
+  }
+}

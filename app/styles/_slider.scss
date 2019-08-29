@@ -1,0 +1,57 @@
+.slider {
+  position: relative;
+  height: 472px;
+  background: $primary;
+  @include media-breakpoint-up('lg') {
+    height: px-to-rem(655, $fs-desktop);
+  }
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  &__bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-position: 50% 50%;
+    background-size: cover;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include gradient-x(rgba($black, 0), $black);
+      opacity: 0.2;
+    }
+    @include media-breakpoint-up('lg') {
+      left: 270/1440 * 100%;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    max-width: 282px;
+    bottom: 58px;
+    font-size: px-to-rem(23, $fs-mobile);
+    @include em-lh(33, 23);
+    letter-spacing: px-to-em(1.15, 23);
+    padding: px-to-em(32, 23) px-to-em(20, 23);
+    background: $gray-100;
+    color: $primary;
+    @include media-breakpoint-up('lg') {
+      bottom: px-to-rem(130, $fs-desktop);
+      max-width: px-to-rem(625, $fs-desktop);
+      font-size: px-to-rem(40, $fs-desktop);
+      @include em-lh(65, 40);
+      letter-spacing: px-to-em(2, 40);
+      padding: px-to-em(100, 40);
+    }
+  }
+}

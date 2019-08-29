@@ -1,0 +1,201 @@
+.header {
+  &__navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .navbar {
+    &-collapse {
+      margin: 0 -1rem;
+      background: $primary;
+      @include media-breakpoint-up('lg') {
+        margin: 0;
+        background: none;
+      }
+    }
+    &-nav {
+      padding: px-to-rem(58, $fs-mobile) 1rem;
+      text-align: center;
+      @include media-breakpoint-up('lg') {
+        align-items: center;
+        padding: 0;
+      }
+    }
+    &-brand {
+      padding: px-to-rem(20, $fs-mobile) 0;
+      @include media-breakpoint-up('lg') {
+        margin-right: 3rem;
+      }
+      @include media-breakpoint-up('xl') {
+        padding: px-to-rem(35, $fs-desktop) 0;
+      }
+    }
+  }
+
+  .nav-link {
+    padding: 0;
+    color: $white;
+    font-size: px-to-rem(18, $fs-mobile);
+    @include em-lh(56, 18);
+    .icon-star {
+      position: relative;
+      font-size: px-to-rem(18, $fs-mobile);
+      top: px-to-em(-2, 18);
+      margin-right: px-to-em(8, 18);
+    }
+    @include media-breakpoint-up('lg') {
+      color: $body-color;
+      font-size: px-to-rem(16, $fs-mobile);
+      @include em-lh(24, 16);
+      white-space: nowrap;
+      padding: 0 px-to-rem(10, $fs-desktop) !important;
+      .icon-star {
+        @include transition($transition-base);
+        stroke: $primary;
+        font-size: px-to-rem(18, $fs-desktop);
+      }
+
+      &--style_button {
+        display: inline-block;
+        font-family: $btn-font-family;
+        font-weight: $btn-font-weight;
+        color: $body-color;
+        text-align: center;
+        vertical-align: middle;
+        user-select: none;
+        background-color: transparent;
+        border: $btn-border-width solid transparent;
+        @include transition($btn-transition);
+
+        @include hover {
+          color: $body-color;
+          text-decoration: none;
+        }
+
+        &:focus {
+          outline: 0;
+          box-shadow: $btn-focus-box-shadow;
+        }
+
+        @include button-outline-variant($primary);
+        @include button-size(
+          $btn-padding-y-sm,
+          $btn-padding-x-sm,
+          $btn-font-size-sm,
+          $btn-line-height-sm,
+          $btn-border-radius-sm
+        );
+
+        &:hover {
+          .icon-star {
+            stroke: $white;
+          }
+        }
+      }
+    }
+    @include media-breakpoint-up('xl') {
+      padding: 0 px-to-rem(15, $fs-desktop) !important;
+      font-size: px-to-rem(16, $fs-desktop);
+
+      &--style_button {
+        padding: $btn-padding-y-sm $btn-padding-x-sm !important;
+      }
+    }
+  }
+
+  @include media-breakpoint-up('lg') {
+    .nav-item:first-child .nav-link {
+      padding-left: 0 !important;
+    }
+    .nav-item:last-child .nav-link {
+      padding-right: 0 !important;
+      &--style_button {
+        padding: $btn-padding-y-sm $btn-padding-x-sm !important;
+      }
+    }
+  }
+
+  .nav-item.active,
+  .nav-link:hover {
+    font-weight: 500;
+    .icon-star {
+      stroke-width: 2;
+    }
+  }
+}
+
+.navbar-toggler {
+  position: relative;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  width: 24px;
+  height: 20px;
+  overflow: hidden;
+
+  &__line {
+    &,
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      height: 2px;
+      background: $primary;
+    }
+
+    top: 50%;
+    margin-top: -1px;
+    width: 16px;
+
+    &::before,
+    &::after {
+      content: '';
+    }
+
+    &::before {
+      top: -9px;
+      width: 24px;
+    }
+
+    &::after {
+      top: 9px;
+      width: 8px;
+    }
+  }
+
+  &.collapsed {
+    .navbar-toggler__line {
+      &,
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.logo {
+  display: block;
+  width: 183px;
+
+  &--style_white {
+    width: 191px;
+  }
+
+  @include media-breakpoint-up('md') {
+    &--style_white {
+      width: 100%;
+      max-width: 191px;
+    }
+  }
+
+  @include media-breakpoint-up('lg') {
+    width: 100%;
+    max-width: 383px;
+    &--style_white {
+      max-width: 241px;
+    }
+  }
+}

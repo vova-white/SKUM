@@ -1,0 +1,51 @@
+.footer {
+  .nav-link {
+    white-space: nowrap;
+    font-size: px-to-rem(16, $fs-desktop);
+    @include em-lh(24, 16);
+    color: $white;
+    padding: 0 px-to-rem(8, $fs-mobile) !important;
+
+    @include media-breakpoint-up('lg') {
+      padding: 0 px-to-rem(22, $fs-desktop) !important;
+    }
+
+    &:hover {
+      font-weight: 500;
+    }
+  }
+
+  .nav-item {
+    &:first-child {
+      .nav-link {
+        padding-left: 0 !important;
+      }
+    }
+    &:last-child {
+      .nav-link {
+        padding-right: 0 !important;
+      }
+    }
+  }
+}
+.contacts {
+  font-size: px-to-rem(12, $fs-mobile);
+  @include em-lh(30, 12);
+  @include media-breakpoint-up('md') {
+    &__item {
+      &:after {
+        content: '|';
+        padding: 0.5rem;
+        position: relative;
+        right: -15px;
+      }
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
+  @include media-breakpoint-up('xl') {
+    font-size: px-to-rem(16, $fs-desktop);
+    @include em-lh(30, 16);
+  }
+}

@@ -50,3 +50,26 @@ h6,
   letter-spacing: px-to-em(3.2, 20);
   text-transform: uppercase;
 }
+
+.line-height__40 {
+  h6,
+  p {
+    @include em-lh(40, 20);
+  }
+  p {
+    margin-bottom: px-to-em(40, 20);
+  }
+}
+
+.text-english {
+  h6 {
+    text-transform: none;
+    margin-bottom: px-to-em(25, 20);
+  }
+  p {
+    font-size: px-to-rem(18, $fs-desktop);
+    @include em-lh(35, 18);
+    font-weight: 300;
+    margin-bottom: px-to-em(40, 18);
+  }
+}

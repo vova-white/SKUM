@@ -6,6 +6,13 @@
     padding-top: px-to-rem(68, $fs-desktop);
     padding-bottom: px-to-rem(68, $fs-desktop);
   }
+
+  &.nav-tabs {
+    border: none;
+    .nav-item {
+      margin-bottom: 0;
+    }
+  }
   @include media-breakpoint-up('md') {
     justify-content: center;
     &-container {
@@ -39,6 +46,11 @@
       &:last-child {
         padding-right: $grid-gutter-width / 2;
       }
+
+      &--md_4 {
+        flex: 0 0 100/3 * 1%;
+        max-width: 100/3 * 1%;
+      }
     }
 
     .btn {
@@ -55,6 +67,15 @@
       }
       @include media-breakpoint-up('lg') {
         padding: 0 0.5rem;
+      }
+      &.nav-link {
+        @extend .btn;
+        @extend .btn-outline-primary;
+
+        &:focus,
+        .active:focus {
+          box-shadow: none !important;
+        }
       }
     }
   }

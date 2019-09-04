@@ -3,8 +3,8 @@
   padding-bottom: px-to-rem(60, $fs-mobile);
 
   @include media-breakpoint-up('xl') {
-    padding-top: px-to-rem(100, $fs-mobile);
-    padding-bottom: px-to-rem(100, $fs-mobile);
+    padding-top: px-to-rem(100, $fs-desktop);
+    padding-bottom: px-to-rem(100, $fs-desktop);
   }
 
   &__title,
@@ -46,5 +46,15 @@
 
   &--light {
     background: $gray-100;
+  }
+
+  &--py_xs {
+    padding-top: px-to-rem(60, $fs-desktop);
+    padding-bottom: px-to-rem(60, $fs-desktop);
+  }
+
+  &--py_sm {
+    padding-top: px-to-rem(80, $fs-desktop);
+    padding-bottom: px-to-rem(80, $fs-desktop);
   }
 }

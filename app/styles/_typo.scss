@@ -44,3 +44,9 @@ h5,
   color: $primary-dark;
   letter-spacing: px-to-em(1.25, 25);
 }
+
+h6,
+.h6 {
+  letter-spacing: px-to-em(3.2, 20);
+  text-transform: uppercase;
+}

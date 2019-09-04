@@ -1,0 +1,19 @@
+.pagination {
+  justify-content: center;
+
+  &__item {
+    font-size: px-to-rem(16, $fs-desktop);
+    a {
+      padding: 0 px-to-rem(12, $fs-desktop);
+      color: $gray-500;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    &--active a {
+      color: $primary;
+    }
+  }
+}

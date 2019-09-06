@@ -68,7 +68,26 @@
 @import 'breadcrumbs';
 @import 'sidebar';
 @import 'publication';
+@import 'tile';
 
 a:hover {
   text-decoration: none;
+}
+
+@include media-breakpoint-up('sm') {
+  .bg-sm-primary {
+    background-color: $primary !important;
+  }
+  .bg-sm-white {
+    background-color: $white !important;
+  }
+  .bg-sm-light {
+    background-color: $light !important;
+  }
+  .text-sm-white {
+    color: $white !important;
+  }
+  .border-sm-right {
+    border-right: 2px solid $border-color;
+  }
 }

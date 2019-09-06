@@ -1,0 +1,46 @@
+.tile {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $white;
+  padding-top: px-to-rem(35, $fs-mobile);
+  padding-bottom: px-to-rem(35, $fs-mobile);
+
+  @include media-breakpoint-up('sm') {
+    height: 280/576 * 100vw;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  @include media-breakpoint-up('md') {
+    height: 256/768 * 100vw;
+  }
+  @include media-breakpoint-up('lg') {
+    height: 363/1440 * 100vw;
+    max-height: 380px;
+  }
+
+  &__title {
+    margin-bottom: px-to-em(10, $h5-font-size-desktop-clear);
+
+    &--xl {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    font-size: px-to-rem(18, $fs-desktop);
+    @include em-lh(30, 18);
+    margin-bottom: 0;
+    padding: 0 px-to-rem(45, $fs-desktop);
+  }
+
+  &-bg {
+    background-size: cover;
+    background-position: center;
+
+    &--xs {
+      height: 214/375 * 100vw;
+    }
+  }
+}

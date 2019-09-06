@@ -57,4 +57,20 @@
     padding-top: px-to-rem(80, $fs-desktop);
     padding-bottom: px-to-rem(80, $fs-desktop);
   }
+
+  &--py_xl {
+    padding-top: px-to-rem(140, $fs-desktop);
+    padding-bottom: px-to-rem(140, $fs-desktop);
+  }
+
+  &--fund {
+    background: url(../images/fund__bg--1.png) left top no-repeat,
+      url(../images/fund__bg--2.png) right bottom no-repeat;
+
+    background-size: 70% auto, 60% auto;
+
+    @include media-breakpoint-up('md') {
+      background-size: 40% auto, 40% auto;
+    }
+  }
 }

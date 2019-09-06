@@ -63,6 +63,10 @@
     padding-bottom: px-to-rem(140, $fs-desktop);
   }
 
+  &--pb_xl {
+    padding-bottom: px-to-rem(140, $fs-desktop);
+  }
+
   &--fund {
     background: url(../images/fund__bg--1.png) left top no-repeat,
       url(../images/fund__bg--2.png) right bottom no-repeat;

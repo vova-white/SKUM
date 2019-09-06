@@ -52,6 +52,7 @@ h6,
 }
 
 .line-height__40 {
+  &,
   h6,
   p {
     @include em-lh(40, 20);

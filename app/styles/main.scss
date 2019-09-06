@@ -91,3 +91,9 @@ a:hover {
     border-right: 2px solid $border-color;
   }
 }
+
+@include media-breakpoint-up('lg') {
+  .w-lg-75 {
+    width: 75% !important;
+  }
+}

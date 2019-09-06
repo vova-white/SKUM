@@ -97,3 +97,69 @@ a:hover {
     width: 75% !important;
   }
 }
+
+.map-iframe {
+  &-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 450/610 * 100%;
+
+      @include media-breakpoint-up('sm') {
+        padding-top: 610/450 * 100%;
+      }
+    }
+  }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.social {
+  display: flex;
+  margin: 0 -15px;
+  &__item {
+    padding: 0 15px;
+    align-items: center;
+    .icon {
+      fill: $gray-200;
+      @include transition($transition-base);
+    }
+    .icon-facebook {
+      font-size: 32px;
+    }
+    .icon-youtube {
+      font-size: 27px;
+    }
+
+    &:hover {
+      .icon-facebook {
+        fill: #4267b2;
+      }
+      .icon-youtube {
+        fill: #ff0000;
+      }
+    }
+  }
+}
+
+.contacts-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  &__item {
+    flex: 0 0 auto;
+    width: auto;
+  }
+}

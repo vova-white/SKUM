@@ -77,4 +77,8 @@
       background-size: 40% auto, 40% auto;
     }
   }
+
+  &--overflow {
+    overflow: hidden;
+  }
 }

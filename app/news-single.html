@@ -97,17 +97,21 @@
     <!-- Header End -->
 
     <!-- News -->
-    <main class="section section--py_xs">
+    <main class="section section--py_xs section--overflow">
       <div class="container">
         <div class="row">
           <!-- News Article -->
           <article class="col-12 news-article">
             <header class="news-article__header">
-              <div class="news-article__meta">27/11/2017</div>
-              <h1 class="h4 news-article__title text-primary-dark">
+              <div class="news-article__meta load-hidden slide-right">
+                27/11/2017
+              </div>
+              <h1
+                class="h4 news-article__title text-primary-dark load-hidden slide-right-50"
+              >
                 第八屆逆境勇士 - 突破青少年選舉
               </h1>
-              <ul class="breadcrumbs">
+              <ul class="breadcrumbs load-hidden slide-right-100">
                 <li class="breadcrumbs__item">
                   <a href="#" class="breadcrumbs__link">主頁</a>
                 </li>
@@ -118,7 +122,7 @@
                 </li>
               </ul>
             </header>
-            <div class="row news-article__entry">
+            <div class="row news-article__entry load-hidden slide-up">
               <div class="col-12 col-lg-10 mx-lg-auto">
                 <p>
                   服務處透過舉辦兩年一度的「逆境勇士」－突破青少年選舉，宣揚關愛身邊的人和事、發放正能量等抗逆精神，除了表揚本澳青少年在面對逆境時仍能堅持和發揮不屈不朽精神外，強調青少年的參與及傳承抗逆的精神。
@@ -139,10 +143,10 @@
     <!-- News End -->
 
     <!-- Next News -->
-    <div class="section section--py_xs section--light">
+    <div class="section section--py_xs section--light section--overflow">
       <div class="container news-next">
         <h6 class="news-next__title">Next</h6>
-        <div class="news-next__item">
+        <div class="news-next__item load-hidden slide-right">
           <a class="h4 news-next__link" href="#"
             >智能家居與護老者支援服務先導計劃 - 活用「護老。護腦」Apps工作坊</a
           >
@@ -150,7 +154,7 @@
             >詳細內容</a
           >
         </div>
-        <div class="news-next__item">
+        <div class="news-next__item load-hidden slide-left">
           <a class="h4 news-next__link" href="#"
             >「體育精彩．睇波不博彩」活動</a
           >
@@ -234,6 +238,7 @@
       src="/node_modules/bootstrap/dist/js/bootstrap.min.js"
     ></script>
     <!-- endbuild -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

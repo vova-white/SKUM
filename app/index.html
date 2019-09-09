@@ -116,7 +116,7 @@
           ></div>
         </li>
       </ul>
-      <div class="slider__caption">
+      <div class="slider__caption invisible">
         <div class="slider__caption-inner"></div>
       </div>
     </div>
@@ -125,9 +125,13 @@
     <!-- News -->
     <section class="section">
       <div class="container">
-        <h3 class="section__title section__title--mb_double">最新消息</h3>
+        <h3
+          class="section__title section__title--mb_double load-hidden slide-up"
+        >
+          最新消息
+        </h3>
         <div class="row news">
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3 load-hidden slide-up-interval">
             <div class="news-card">
               <div class="card news-card__inner">
                 <div class="card-body">
@@ -148,7 +152,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3 load-hidden slide-up-interval">
             <div class="news-card">
               <div class="card news-card__inner">
                 <div class="card-body">
@@ -172,7 +176,9 @@
               </div>
             </div>
           </div>
-          <div class="d-none d-sm-block col-12 col-sm-6 col-lg-3">
+          <div
+            class="d-none d-sm-block col-12 col-sm-6 col-lg-3 load-hidden slide-up-interval"
+          >
             <div class="news-card">
               <div class="card news-card__inner">
                 <div class="card-body">
@@ -193,7 +199,9 @@
               </div>
             </div>
           </div>
-          <div class="d-none d-sm-block col-12 col-sm-6 col-lg-3">
+          <div
+            class="d-none d-sm-block col-12 col-sm-6 col-lg-3 load-hidden slide-up-interval"
+          >
             <div class="news-card">
               <div class="card news-card__inner">
                 <div class="card-body">
@@ -217,7 +225,7 @@
             </div>
           </div>
         </div>
-        <div class="text-center">
+        <div class="text-center load-hidden slide-up">
           <button class="btn btn-outline-primary">更多消息</button>
         </div>
       </div>
@@ -228,10 +236,10 @@
     <!-- Slider End -->
 
     <!-- Services -->
-    <section class="section section--light">
+    <section class="section section--light section--overflow">
       <div class="container">
-        <h3 class="section__title">我們的宗旨</h3>
-        <div class="section__description">
+        <h3 class="section__title load-hidden slide-up">我們的宗旨</h3>
+        <div class="section__description load-hidden slide-up-50">
           <p>
             聖公會澳門社會服務處本著基督「非以役人，乃役於人」的精神，
             協助社會上面對各種困難的人士，重拾愛惜自己的動力。我們希望能讓提供服務的人員，
@@ -239,7 +247,7 @@
           </p>
         </div>
         <div class="row services">
-          <div class="col-12 col-sm-6 services__col">
+          <div class="col-12 col-sm-6 services__col load-hidden slide-right">
             <div class="service">
               <div class="service__heading">
                 <div class="service__icon">
@@ -257,7 +265,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 services__col">
+          <div class="col-12 col-sm-6 services__col load-hidden slide-left">
             <div class="service">
               <div class="service__heading">
                 <div class="service__icon">
@@ -277,7 +285,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 services__col">
+          <div class="col-12 col-sm-6 services__col load-hidden slide-right">
             <div class="service">
               <div class="service__heading">
                 <div class="service__icon">
@@ -296,7 +304,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 services__col">
+          <div class="col-12 col-sm-6 services__col load-hidden slide-left">
             <div class="service">
               <div class="service__heading">
                 <div class="service__icon">
@@ -390,6 +398,7 @@
     ></script>
     <!-- endbuild -->
     <script src="scripts/jquery.flexslider-min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

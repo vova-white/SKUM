@@ -1,4 +1,5 @@
 .taps {
+  overflow: hidden;
   @include media-breakpoint-up('sm') {
     .tap:nth-child(odd) {
       .tap__img {

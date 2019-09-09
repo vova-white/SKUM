@@ -98,7 +98,7 @@
 
     <!-- Headline -->
     <div class="headline">
-      <h1 class="h3 headline__title">關於我們</h1>
+      <h1 class="h3 headline__title load-hidden slide-up-zoom">關於我們</h1>
     </div>
     <!-- Headline End -->
 
@@ -106,19 +106,39 @@
     <div class="container-fluid buttons-menu-container">
       <div class="row buttons-menu">
         <div class="col-auto buttons-menu__item">
-          <a href="#0" class="btn btn-outline-primary active">服務處簡介</a>
+          <a
+            href="#0"
+            class="btn btn-outline-primary load-hidden slide-up-interval active"
+            >服務處簡介</a
+          >
         </div>
         <div class="col-auto buttons-menu__item">
-          <a href="#0" class="btn btn-outline-primary">20周年回顧</a>
+          <a
+            href="#0"
+            class="btn btn-outline-primary load-hidden slide-up-interval"
+            >20周年回顧</a
+          >
         </div>
         <div class="col-auto buttons-menu__item">
-          <a href="#0" class="btn btn-outline-primary">2017社會服務獎章</a>
+          <a
+            href="#0"
+            class="btn btn-outline-primary load-hidden slide-up-interval"
+            >2017社會服務獎章</a
+          >
         </div>
         <div class="col-auto buttons-menu__item">
-          <a href="#0" class="btn btn-outline-primary">組織架構</a>
+          <a
+            href="#0"
+            class="btn btn-outline-primary load-hidden slide-up-interval"
+            >組織架構</a
+          >
         </div>
         <div class="col-auto buttons-menu__item">
-          <a href="#0" class="btn btn-outline-primary">2018-2022年 服務規劃</a>
+          <a
+            href="#0"
+            class="btn btn-outline-primary load-hidden slide-up-interval"
+            >2018-2022年 服務規劃</a
+          >
         </div>
       </div>
     </div>
@@ -129,8 +149,10 @@
       <div class="container text-center">
         <div class="row justify-content-center">
           <div class="col-12 col-md-10">
-            <h2 class="h5 section__title">澳門服務簡介</h2>
-            <div class="section__description">
+            <h2 class="h5 section__title load-hidden slide-up-zoom">
+              澳門服務簡介
+            </h2>
+            <div class="section__description load-hidden slide-up-50">
               <p>
                 聖公會澳門社會服務處早於1997年成立，一直持守「個別關懷•專業服務•同行成長•創意更新」
                 之宗旨，並本著「非以役人，乃役於人」的基督
@@ -141,8 +163,10 @@
                 為澳門居民提供適切服務， 協助他們開拓豐盛人生。
               </p>
             </div>
-            <h3 class="h5 section__title">Background</h3>
-            <p class="p--sm">
+            <h3 class="h5 section__title load-hidden slide-up-zoom">
+              Background
+            </h3>
+            <p class="p--sm load-hidden slide-up-50">
               Established in 1997, the S.K.H. Macau Social Services Coordination
               Office has always devoted itself to providing personalized care
               and professional services while walking hand in hand with its
@@ -162,9 +186,11 @@
     <!-- Map -->
     <section class="section pt-0">
       <div class="container text-center">
-        <h2 class="h5 section__title">服務處地圖 Map</h2>
+        <h2 class="h5 section__title load-hidden slide-up-zoom">
+          服務處地圖 Map
+        </h2>
         <div class="row justify-content-center">
-          <div class="col-12 col-sm-8">
+          <div class="col-12 col-sm-8 load-hidden slide-up-50">
             <picture>
               <source
                 media="(max-width: 691px)"
@@ -183,11 +209,13 @@
     <!-- Map End -->
 
     <!-- Services -->
-    <section class="section pt-0">
+    <section class="section pt-0 section--overflow">
       <div class="container">
-        <h2 class="h5 section__title mb-0">服務範疇 Services</h2>
+        <h2 class="h5 section__title mb-0 load-hidden slide-up-zoom">
+          服務範疇 Services
+        </h2>
         <div class="row pt-5">
-          <div class="col-6 services__col">
+          <div class="col-6 services__col load-hidden slide-right">
             <div class="service service--mb_4">
               <picture class="service__picture">
                 <source
@@ -216,7 +244,7 @@
               <span class="service__subtitle">Children Services</span>
             </div>
           </div>
-          <div class="col-6 services__col">
+          <div class="col-6 services__col load-hidden slide-left">
             <div class="service service--mb_4">
               <picture class="service__picture">
                 <source
@@ -245,7 +273,7 @@
               <span class="service__subtitle">Teenqge Services</span>
             </div>
           </div>
-          <div class="col-6 services__col">
+          <div class="col-6 services__col load-hidden slide-right">
             <div class="service service--mb_4">
               <picture class="service__picture">
                 <source
@@ -274,7 +302,7 @@
               <span class="service__subtitle">Family Services</span>
             </div>
           </div>
-          <div class="col-6 services__col">
+          <div class="col-6 services__col load-hidden slide-left">
             <div class="service service--mb_4">
               <picture class="service__picture">
                 <source
@@ -381,6 +409,7 @@
       src="/node_modules/bootstrap/dist/js/bootstrap.min.js"
     ></script>
     <!-- endbuild -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

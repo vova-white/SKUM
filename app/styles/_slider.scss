@@ -3,7 +3,89 @@
   height: 472px;
   background: $primary;
   @include media-breakpoint-up('lg') {
+    padding-left: 270/1440 * 100%;
     height: px-to-rem(655, $fs-desktop);
+  }
+
+  &__caption {
+    position: absolute;
+    max-width: 282px;
+    bottom: 58px;
+    font-size: px-to-rem(23, $fs-mobile);
+    @include em-lh(33, 23);
+    letter-spacing: px-to-em(1.15, 23);
+    padding: px-to-em(32, 23) px-to-em(20, 23);
+    background: $gray-100;
+    color: $primary;
+    z-index: 100;
+    left: 0;
+    @include media-breakpoint-up('lg') {
+      bottom: px-to-rem(130, $fs-desktop);
+      max-width: px-to-rem(625, $fs-desktop);
+      font-size: px-to-rem(40, $fs-desktop);
+      @include em-lh(65, 40);
+      letter-spacing: px-to-em(2, 40);
+      padding: px-to-em(100, 40);
+    }
+
+    &-inner {
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+
+      &.--is_active {
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+      }
+    }
+  }
+
+  .slides,
+  .flex-viewport {
+    height: 100%;
+  }
+
+  &.flexslider {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+  }
+
+  .flex-control-nav {
+    bottom: 1rem;
+    line-height: 0;
+    @include media-breakpoint-up('sm') {
+      width: auto;
+      bottom: px-to-rem(50, $fs-desktop);
+      right: 4rem;
+    }
+
+    li {
+      margin: 0 px-to-rem(30, $fs-desktop);
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .flex-control-paging li a {
+    width: px-to-rem(17, $fs-desktop);
+    height: px-to-rem(17, $fs-desktop);
+    border: 2px solid $gray-300;
+    background: transparent;
+    box-shadow: none;
+    @include transition($transition-base);
+
+    &:hover {
+      background: $light;
+    }
+
+    &.flex-active {
+      border-color: $light;
+      background: $light;
+    }
   }
 }
 
@@ -19,6 +101,7 @@
     bottom: 0;
     background-position: 50% 50%;
     background-size: cover;
+    z-index: 98;
     &:after {
       content: '';
       display: block;
@@ -29,29 +112,6 @@
       bottom: 0;
       @include gradient-x(rgba($black, 0), $black);
       opacity: 0.2;
-    }
-    @include media-breakpoint-up('lg') {
-      left: 270/1440 * 100%;
-    }
-  }
-
-  &__overlay {
-    position: absolute;
-    max-width: 282px;
-    bottom: 58px;
-    font-size: px-to-rem(23, $fs-mobile);
-    @include em-lh(33, 23);
-    letter-spacing: px-to-em(1.15, 23);
-    padding: px-to-em(32, 23) px-to-em(20, 23);
-    background: $gray-100;
-    color: $primary;
-    @include media-breakpoint-up('lg') {
-      bottom: px-to-rem(130, $fs-desktop);
-      max-width: px-to-rem(625, $fs-desktop);
-      font-size: px-to-rem(40, $fs-desktop);
-      @include em-lh(65, 40);
-      letter-spacing: px-to-em(2, 40);
-      padding: px-to-em(100, 40);
     }
   }
 }

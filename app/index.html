@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500&display=swap&subset=chinese-traditional"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles/flexslider.css" />
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css" />
     <!-- endbuild -->
@@ -97,15 +98,26 @@
     <!-- Header End -->
 
     <!-- Slider -->
-    <div class="slider">
-      <div class="slide">
-        <div
-          class="slide__bg"
-          style="background-image: url(images/banner.jpg)"
-        ></div>
-        <div class="slide__overlay">
-          個別關懷、專業服務、 同行成長、創意更新
-        </div>
+    <div class="slider flexslider">
+      <ul class="slides">
+        <li
+          class="slide"
+          data-caption="個別關懷、專業服務、 同行成長、創意更新"
+        >
+          <div
+            class="slide__bg"
+            style="background-image: url(images/banner.jpg)"
+          ></div>
+        </li>
+        <li class="slide" data-caption="第八屆逆境勇士 - 突破青少年選舉">
+          <div
+            class="slide__bg"
+            style="background-image: url(images/banner.jpg)"
+          ></div>
+        </li>
+      </ul>
+      <div class="slider__caption">
+        <div class="slider__caption-inner"></div>
       </div>
     </div>
     <!-- Slider End -->
@@ -377,6 +389,7 @@
       src="/node_modules/bootstrap/dist/js/bootstrap.min.js"
     ></script>
     <!-- endbuild -->
+    <script src="scripts/jquery.flexslider-min.js"></script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
